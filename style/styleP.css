@@ -1,0 +1,83 @@
+/** 
+ * @author Nicolas Capiaumont
+ * css des pages de mon portfolio sauf la page index (présentation générale)
+ */
+/* Place tous les éléments de la page au bon endroit (bord sans margin et padding) */
+* {
+	margin: 0;
+	padding: 0;
+}
+/* Fixe le style d'ecriture sur la page */
+body {
+	font: normal 100% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	overflow: hidden;
+	background-color: #F2F2F2;
+}
+/* Style des titres h1 */
+h1 {
+	color: #fff;
+	text-align: center;
+	padding:20px;
+	background: orange;
+	letter-spacing: 1px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+/* Style des titres h2 */
+h2 {
+	text-align: center;
+	padding: 15px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	background-color: #848484;
+	color: #F2F2F2;
+}
+/* Style des titres h3 */
+h3 {
+	background-color: #E6E6E6;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+/* Style des titres h4 */
+h4 {
+
+}
+/* Style des paragraphes */
+p {
+	color: #000;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: justify;
+	padding: 10px;
+}
+/* amélioration du rendu des images */
+img {
+
+}
+/* supprime la decoration des textes qui auront cette classe */
+.textnodeco {
+	text-decoration: none;
+}
+/* mise en place de l'image facebook */
+#facebook {
+	width: 60px;
+	height: 60px;
+}
+/* mise en place de l'image github */
+#github {
+	width: 60px;
+	height: 60px;
+}
+/* mise en place de l'image contact */
+#contact {
+	width: 60px;
+	height: 60px;
+}
+/* Mise en forme du footer */
+#footer {
+	color: #fff;
+	background-color:#1C1C1C;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	font-size: 25px;
+	padding: 25px;
+}
