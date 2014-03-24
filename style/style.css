@@ -156,6 +156,7 @@ a {
 	position: relative;
 	background-color: rgba(0, 0, 0, .6);
 	padding: 50px;
+	padding-top: 20px;
 }
 #slide1 .slide_inside {
 	text-align: center;
