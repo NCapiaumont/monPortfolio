@@ -19,7 +19,7 @@ a {
 	color:#fff;
 }
 #logo {
-	background: url(images/logo.png);
+	background: url(../images/logo.png);
 	position: absolute;
 	top: 10px;
 	left: 10%;
@@ -76,7 +76,7 @@ a {
 	transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
 }
 #slide1 {
-	background:url(images/slide1-bg.jpg) center 0 no-repeat fixed;
+	background:url(../images/slide1-bg.jpg) center 0 no-repeat fixed;
 	background-color: rgb(0, 0, 0);
 }
 #slide2 {
