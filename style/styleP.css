@@ -10,7 +10,6 @@
 /* Fixe le style d'ecriture sur la page */
 body {
 	font: normal 100% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
-	overflow: hidden;
 	background-color: #F2F2F2;
 }
 /* Style des titres h1 */
