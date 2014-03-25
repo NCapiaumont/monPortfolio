@@ -12,6 +12,29 @@ body {
 	font: normal 100% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
 	background-color: #F2F2F2;
 }
+/* le menu qui va bien */
+#menu {
+	height:25px;
+	background-color: rgb(28, 28, 28);
+	color: #fff;
+	padding:15px;
+	padding-left:30px;
+	padding-right:30px;
+	font-size: 20px;
+	word-spacing: 30px;/* espacement entre deux mots */
+
+}
+.demi-page {
+	width:50%;	
+}
+/* placement a gauche */
+.left {
+	float: left !important;	
+}
+/* placement a droite */
+.right {
+	float: right !important;
+}
 /* Style des titres h1 */
 h1 {
 	color: #fff;
@@ -41,6 +64,12 @@ h3 {
 h4 {
 
 }
+/* classe contenu qui place correctement le contenu de la page */
+.contenu {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+}
 /* Style des paragraphes */
 p {
 	color: #000;
@@ -49,14 +78,26 @@ p {
 	text-align: justify;
 	padding: 10px;
 }
+/* Enleve les points des listes */
+li{
+	list-style-type:none;
+}
 /* amélioration du rendu des images */
 img {
-
+	border:solid;
+	border-color:orange;
 }
 /* supprime la decoration des textes qui auront cette classe */
 .textnodeco {
 	text-decoration: none;
+	color:rgb(255, 255, 255);
+	letter-spacing: 1px;
 }
+/* classe active pour afficher si le menu est actif */
+.active {
+	color:orange;
+}
+
 /* mise en place de l'image facebook */
 #facebook {
 	width: 60px;
@@ -77,6 +118,27 @@ img {
 	color: #fff;
 	background-color:#1C1C1C;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-	font-size: 25px;
+	font-size: 20px;
 	padding: 25px;
+	height: 70px;
+	margin-top:50px;
 }
+/* texte nom dans le footer */
+#textFooterNicolas {
+	font-size: 20px;
+}
+/* class du texte du footer */
+.textFooterDroit {
+	font-size: 15px;
+}
+/* placement des reseaux dans le footer */
+#reseaux {
+	display:block;
+	float:right;
+}
+/* placement du texte dans le footer */
+#textesFooter {
+	display:block;
+	float:left;
+}
+/* width 665px passage en format tablette/téléphone */
