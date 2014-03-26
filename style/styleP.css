@@ -24,9 +24,6 @@ body {
 	word-spacing: 30px;/* espacement entre deux mots */
 
 }
-.demi-page {
-	width:50%;	
-}
 /* placement a gauche */
 .left {
 	float: left !important;	
@@ -64,11 +61,24 @@ h3 {
 h4 {
 
 }
-/* classe contenu qui place correctement le contenu de la page */
-.contenu {
+/* classe row qui place correctement le contenu de la page */
+.row {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1000px;
+}
+.colonne-left {
+	position: relative;
+	width: 50%;
+	float: left;
+}
+.colonne-right {
+	position: relative;
+	width: 50%;
+	float: right;
+}
+.clear {
+	clear: both;
 }
 /* Style des paragraphes */
 p {
