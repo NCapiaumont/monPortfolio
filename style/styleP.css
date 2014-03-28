@@ -93,7 +93,7 @@ li{
 	list-style-type:none;
 }
 /* amélioration du rendu des images */
-img {
+.imgDeco {
 	border:solid;
 	border-color:orange;
 }
@@ -140,6 +140,10 @@ img {
 /* class du texte du footer */
 .textFooterDroit {
 	font-size: 15px;
+}
+#reseaux li{
+	float: left;
+	margin: 10px;
 }
 /* placement des reseaux dans le footer */
 #reseaux {
