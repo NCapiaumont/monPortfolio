@@ -88,9 +88,62 @@ p {
 	text-align: justify;
 	padding: 10px;
 }
+.center {
+	text-align:center;	
+}
+/* décoration des boutons */
+.buttonDeco {
+	color: #fff;
+	background-color:#1C1C1C;
+	text-align: center;
+	width: 150px;
+	height: 50px;
+	border: none;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+	cursor:pointer;
+}
+/* hover (au passage de la souris) changement de couleur */
+.buttonDeco:hover {
+	background-color: orange;
+}
+.textareaDeco {
+	max-width:488px;
+	max-height:208px;
+	padding:5px;
+	height: 209px;
+	width: 489px;
+}
+.espace {
+	height:50px;
+	width:100%;	
+}
+.inputTextDeco {
+	width:100%;
+	height:30px;
+	padding-left:5px;
+}
+.textOrange {
+	color:orange;	
+}
 /* Enleve les points des listes */
 li{
 	list-style-type:none;
+}
+/* change la couleur en cas d'erreur lors de l'envoi de l'email */
+.erreur{
+	background-color:red;	
+}
+/* change la couleur en cas d'email envoyé avec succes */
+.good{
+	background-color:green;	
+}
+/* change la couleur en cas d'email avant les 2 minutes */
+.wait{
+	background-color:blue;	
 }
 /* amélioration du rendu des images */
 .imgDeco {
