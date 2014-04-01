@@ -12,8 +12,21 @@ body {
 	font: normal 100% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
 	background-color: #F2F2F2;
 }
+.header{
+	height:200px;
+}
+.f-head{
+	margin-top: 50px;
+}
+.f-nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:50;
+
+}
 /* le menu qui va bien */
-#menu {
+.nav {
 	height:25px;
 	background-color: rgb(28, 28, 28);
 	color: #fff;
@@ -42,6 +55,8 @@ h1 {
 	background: orange;
 	letter-spacing: 1px;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	z-index:2;
+
 }
 /* Style des titres h2 */
 h2 {
