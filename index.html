@@ -1,69 +1,114 @@
 <!doctype html>
-<html lang="fr">
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Nicolas Capiaumont</title>
-	<link href="style/style.css" rel="stylesheet" type="text/css">
-  	<link rel="icon" href="favicon.ico">
+	<link href="style/styleP.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var menu = jQuery.noConflict();
+		menu("document").ready(function(){
+			menu(window).scroll(function () {
+				if (menu(this).scrollTop() > 199) {
+					menu('.nav-container').addClass("f-nav");
+				} else {
+					menu('.nav-container').removeClass("f-nav");
+				}
+			});
+		});
+		var head = jQuery.noConflict();
+		head("document").ready(function(){
+		
+			head(window).scroll(function () {
+				if (head(this).scrollTop() > 199) {
+					head(".contenu").addClass("f-head");
+				} else {
+					head(".contenu").removeClass("f-head");
+				}
+			});
+		});
+	</script>
 </head>
-<body>
-	<div id="logo"></div>
-	<span id="s1"></span>
-	<span id="s2"></span>
-	<span id="s3"></span>
-	<div id="wrap">
-		<ul id="nav">
-			<li><a href="#s1">Accueil</a></li>
-			<li><a href="#s2">A Propos</a></li>
-			<li><a href="#s3">Réalisations</a></li>
-		</ul>
-		<div id="slide1">
-			<div class="slide_inside">					
-				<h1>
-					<img src="images/logo-port-folio.png" alt="portfolio">
-				</h1>
-			</div> <!--.slide_inside-->	 
-		</div> <!-- slide1 -->
-		<div id="slide2">
-			<div class="slide_inside">
-				<img src="images/bomb-squad-trooper.png" id="img1" alt="">
-				<img src="images/clone.png" id="img2" alt="">
-				<h2>Curriculum vitae</h2>
-                <h3>Diplome</h3>
+<body class="contenu">
+	<div class="header center">
+		DU BLABLABLALBLA RPZ WOLF LA FAMILLE SISI TMTC
+	</div>
+    <div class="nav-container">
+        <div class="nav">
+            <div class="left">
+                <a class="textnodeco active" href="index.html">ACCUEIL</a>
+            </div>
+            <div class="right">
+                <a class="textnodeco" href="cours.html">COURS</a>
+                <a class="textnodeco" href="ppe.html">PPE</a>
+                <a class="textnodeco" href="stage1.html">STAGE1</a>
+                <a class="textnodeco" href="stage2.html">STAGE2</a>
+                <a class="textnodeco" href="perso.html">PERSO</a>
+            </div>
+    	</div>
+    </div>
+	<h1>Mon PortFolio</h1>
+    <div class="row">
+        <h2>Curriculum vitae</h2>
+        <div class="colonne-left">
+            <h3>Diplome</h3>
+            <ul>
+                <li>- Permis B</li>
+                <li>- Le baccalauréat <a href="http://fr.wikipedia.org/wiki/Baccalaur%C3%A9at_sciences_et_technologies_industrielles_en_g%C3%A9nie_%C3%A9lectrotechnique">sciences et technologies industrielles génie Électrotechnique</a> en 2012</li>
+                <li>- Le diplôme national du brevet</li>
+            </ul>
+        </div>
+        <div class="colonne-right center">
+        	<h3>Moi</h3>
+            <img class="imgDeco" src="images/logo.png" alt="ma photo" height="200px">
+        </div>
+        <div class="clear"></div>
+        <div class="colonne-left">
+            <h3>Compétences</h3>
+            <ul>
+                <li>- Programmation : C++, Qt Creator, Java</li>
+                <li>- Base de données : MySql, SQLite</li>
+                <li>- Web : HTML5, CSS3, XML, PHP5,JavaScript</li>
+                <li>- CMS : PrestaShop, Joomla, Drupal, DokuWiki</li>
+            </ul>
+        </div>
+        <div class="colonne-right">
+        	<h3>Espace de travail</h3>
+            <ul>
+                <li>- Linux Debian (Squeeze, Wheezy)</li>
+                <li>- Mac OS</li>
+                <li>- Windows</li>
+                <li>- Proxmox</li>
+                <li>- VirtualBox</li>
+                <li>- iOS</li>
+                <li>- Android</li>
+            </ul>
+    	</div>
+        <div class="clear"></div>
+		<h2>Expériences professionnelles</h2>
+        <ul>
+        	<li>- Stage 3ème collège, Sud Air Equipement - Vente de fourniture aéronautique</li>
+            <li>- Stage 1ère année BTS SIO, Sud Air Equipement - Création d'un site de vente en ligne</li>
+            <li>- Stage 2ème année BTS SIO, Antidot - Création d'une interface web</li>
+        </ul>
+    </div>
+	<div id="footer">
+        <div class="row">
+            <div id="textesFooter">
+                <div id="textFooterNicolas">Nicolas Capiaumont</div>
+                <div class="textFooterDroit">© 2014 Nicolas Capiaumont - Tous droits réservés - v1.0</div>
+                <div class="textFooterDroit"><a class="textnodeco" href="legal.html">Mentions Legales</a></div>
+            </div>
+            <div id="reseaux">
                 <ul>
-                    <li>Permis B</li>
-                    <li>Le baccalauréat <a href="http://fr.wikipedia.org/wiki/Baccalaur%C3%A9at_sciences_et_technologies_industrielles_en_g%C3%A9nie_%C3%A9lectrotechnique">sciences et technologies industrielles génie Électrotechnique</a> en 2012</li>
-                    <li>Le diplôme national du brevet</li>
+                    <li><a class="textnodeco" id="facebook" href="https://www.facebook.com/nicolas.capiaumont" target="_blank"><img src="images/reseauxSociaux/facebook.png" alt="facebook"></a></li>
+                    <li><a class="textnodeco" id="facebook" href="https://plus.google.com/u/0/+NicolasCapiaumont/" target="_blank"><img src="images/reseauxSociaux/googlePlus.png" alt="gogole plus"></a></li>
+                    <li><a class="textnodeco" id="github" href="https://github.com/NCapiaumont" target="_blank"><img src="images/reseauxSociaux/github.png" alt="github"></a></li>
+                    <li><a class="textnodeco" id="contact" href="contact.php"><img src="images/reseauxSociaux/mail.png" alt="contact"></a></li>
                 </ul>
-                <h3>Compétences</h3>
-                <ul>
-                    <li>Programmation : C++, Qt Creator, PHP5, JavaScript, Java</li>
-                    <li>Base de données : MySql</li>
-                    <li>Web : HTML5, CSS3, XML</li>
-                    <li>CMS : PrestaShop, Joomla, Drupal, DokuWiki</li>
-                </ul>
-                <h3>Espace de travail</h3>
-                <ul>
-                    <li>Linux Debian (Squeeze, Wheezy)</li>
-                    <li>Mac OS</li>
-                    <li>Windows</li>
-                    <li>Proxmox</li>
-                    <li>VirtualBox</li>
-                    <li>iOS</li>
-                    <li>Android</li>
-            	</ul>
-			</div> <!-- .slide_inside-->	     	
-		</div> <!-- slide2 -->
-		<div id="slide3">
-			<div class="slide_inside">			
-				<h2>Réalisations</h2>		
-					<a href="ppe.html"><h3>PPE</h3></a>
-					<a href="stage1.html"><h3>Stage 1</h3></a>
-                    <a href="stage2.html"><h3>Stage 2</h3></a>
-                    <a href="cours.html"><h3>Cours</h3></a>
-                    <a href="perso.html"><h3>Personnelle</h3></a>
-			</div> <!-- .slide_inside-->	    
-		</div> <!--  slide3 -->
-	</div> <!-- wrap -->	
+            </div>
+        </div>
+    </div>
 </body>
 </html>
