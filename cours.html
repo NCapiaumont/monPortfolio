@@ -4,18 +4,49 @@
 	<meta charset="utf-8">
 	<title>Réalisations - Cours</title>
 	<link href="style/styleP.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var menu = jQuery.noConflict();
+		menu("document").ready(function(){
+		
+			menu(window).scroll(function () {
+				if (menu(this).scrollTop() > 199) {
+					menu('.nav-container').addClass("f-nav");
+				} else {
+					menu('.nav-container').removeClass("f-nav");
+				}
+			});
+		});
+		var head = jQuery.noConflict();
+		head("document").ready(function(){
+		
+			head(window).scroll(function () {
+				if (head(this).scrollTop() > 199) {
+					head(".contenu").addClass("f-head");
+				} else {
+					head(".contenu").removeClass("f-head");
+				}
+			});
+		});
+	</script>
 </head>
-<body>
-	<div id="menu">
-		<div class="left">
-			<a class="textnodeco" href="index.html">ACCUEIL</a>
-		</div>
-		<div class="right">
-        	<a class="textnodeco active" href="cours.html">COURS</a>
-           	<a class="textnodeco" href="ppe.html">PPE</a>
-            <a class="textnodeco" href="stage1.html">STAGE1</a>
-            <a class="textnodeco" href="stage2.html">STAGE2</a>
-            <a class="textnodeco" href="perso.html">PERSO</a>
+<body class="contenu">
+	<div class="header center">
+		DU BLABLABLALBLA RPZ WOLF LA FAMILLE SISI TMTC
+	</div>
+    <div class="nav-container">
+        <div class="nav">
+            <div class="left">
+                <a class="textnodeco" href="index.html">ACCUEIL</a>
+            </div>
+            <div class="right">
+                <a class="textnodeco active" href="cours.html">COURS</a>
+                <a class="textnodeco" href="ppe.html">PPE</a>
+                <a class="textnodeco" href="stage1.html">STAGE1</a>
+                <a class="textnodeco" href="stage2.html">STAGE2</a>
+                <a class="textnodeco" href="perso.html">PERSO</a>
+            </div>
     	</div>
     </div>
 	<h1>Mes rélisations faites en cours</h1>

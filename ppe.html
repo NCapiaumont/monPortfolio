@@ -4,18 +4,49 @@
 	<meta charset="utf-8">
 	<title>Réalisations - PPE</title>
 	<link href="style/styleP.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var menu = jQuery.noConflict();
+		menu("document").ready(function(){
+		
+			menu(window).scroll(function () {
+				if (menu(this).scrollTop() > 199) {
+					menu('.nav-container').addClass("f-nav");
+				} else {
+					menu('.nav-container').removeClass("f-nav");
+				}
+			});
+		});
+		var head = jQuery.noConflict();
+		head("document").ready(function(){
+		
+			head(window).scroll(function () {
+				if (head(this).scrollTop() > 199) {
+					head(".contenu").addClass("f-head");
+				} else {
+					head(".contenu").removeClass("f-head");
+				}
+			});
+		});
+	</script>
 </head>
-<body>
-	<div id="menu">
-    	<div class="left">
-        	<a class="textnodeco" href="index.html">ACCUEIL</a>
-        </div>
-        <div class="right">
-        	<a class="textnodeco" href="cours.html">COURS</a>
-           	<a class="textnodeco active" href="ppe.html">PPE</a>
-            <a class="textnodeco" href="stage1.html">STAGE1</a>
-            <a class="textnodeco" href="stage2.html">STAGE2</a>
-            <a class="textnodeco" href="perso.html">PERSO</a>
+<body class="contenu">
+	<div class="header center">
+		DU BLABLABLALBLA RPZ WOLF LA FAMILLE SISI TMTC
+	</div>
+    <div class="nav-container">
+        <div class="nav">
+            <div class="left">
+                <a class="textnodeco" href="index.html">ACCUEIL</a>
+            </div>
+            <div class="right">
+                <a class="textnodeco" href="cours.html">COURS</a>
+                <a class="textnodeco active" href="ppe.html">PPE</a>
+                <a class="textnodeco" href="stage1.html">STAGE1</a>
+                <a class="textnodeco" href="stage2.html">STAGE2</a>
+                <a class="textnodeco" href="perso.html">PERSO</a>
+            </div>
     	</div>
     </div>
 	<h1>Mes réalisations faites en PPE</h1>
@@ -23,54 +54,40 @@
 		<p>Présentation dans cette partie des réalisations effectuées en PPE lors de mes deux années de formation au BTS SIO de GAP</p>
     </div>
     <h1>GSB</h1>
+    <div class="row">
     <h2>Application frais</h2>
 	<h3>Contexte</h3>
-    <div class="row">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-    </div>
 	<h3>Cahier des charges</h3>
-    <div class="row">
     	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-    </div>
     <h2>Gestion des comptes-rendus</h2>
 	<h3>Contexte</h3>
-    <div class="row">
-    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-     </div>
+       	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
     <h3>Cahier des charges</h3>
-    <div class="row">
     	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-    </div>
     <h2>Back Office</h2>
     <h3>Contexte</h3>
-    <div class="row">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-    </div>
 	<h3>Cahier des charges</h3>
-    <div class="row">
     	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
     </div>
     <div class="espace"></div>
 	<h1>Liste des Courses</h1>
+    <div class="row">
     <h2>Application mobile</h2>
     <h3>Contexte</h3>
-    <div class="row">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-    </div>
     <h3>Cahier des charges</h3>
-    <div class="row">
 		<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
-    </div>
     <h2>Back Office</h2>
     <h3>Contexte</h3>
-    <div class="row">
 		<p>Back Office de l'application mobile liste de courses qui permet d'ajouter, de modifier et de supprimer des produits et des rayons. A DEVELOPPER</p>
     </div>
     <div class="espace"></div>
     <h1>CMS</h1>
+    <div class="row center">
     <h2>Joomla</h2>
     <div class="espace"></div>
-    <div class="row center">
     	<div class="colonne-left">
         	<p><a href="http://www.joomla.fr/">Joomla!</a> est un système de gestion de contenu (en anglais CMS pour content management system) libre, open source et gratuit. Il est écrit en PHP et utilise une base de données MySQL. <a href="http://www.joomla.fr/">Joomla!</a> inclut des fonctionnalités telles que des flux RSS, des news, une version imprimable des pages, des blogs, des sondages, des recherches. <a href="http://www.joomla.fr/">Joomla!</a> est sous licence GNU GPL.
 <a href="http://www.joomla.fr/">Joomla!</a>, déformation du mot swahili Jumla, veut dire : «tous ensemble», en arabe Jumla « جملة » signifie «ensemble», «en bloc» ou «en tout», en moré « restons unis ». Il est créé à partir du CMS Open Source Mambo en août 2005, suite aux désaccords d'une majorité des développeurs open source avec la société propriétaire du nom de Mambo. Celle-ci, pour accroître sa notoriété, voulait utiliser ce nom pour le CMS propriétaire qu'elle développait en parallèle. La très grande majorité des utilisateurs a rapidement suivi le mouvement.</p>
@@ -81,15 +98,13 @@
         </div>
     </div>
     <div class="clear"></div>
-    <h3>Contexte</h3>
     <div class="row">
-		<p>Réalisation d'un site web avec le CMS Joomla!. Le sujet était de faire un site internet pour le Portail des Activités Sportives, Culturelles, Economiques et Touristiques (P.A.S.E.T.) de la ville Gap.</p>
-    </div>
-    <h3>Cahier des charges</h3>
-    <div class="row">
-    	<p>PAS MAL DE CHOSES A VENIR</p>
-    </div>
+        <h3>Contexte</h3>
+            <p>Réalisation d'un site web avec le CMS Joomla!. Le sujet était de faire un site internet pour le Portail des Activités Sportives, Culturelles, Economiques et Touristiques (P.A.S.E.T.) de la ville Gap.</p>
+        <h3>Cahier des charges</h3>
+            <p>PAS MAL DE CHOSES A VENIR</p>
     <h2>Drupal</h2>
+    </div>
     <div class="espace"></div>
     <div class="row center">
     	<div class="colonne-left">
@@ -102,11 +117,11 @@
         </div>
     </div>
     <div class="clear"></div>
-    <h3>Contexte</h3>
     <div class="row">
+        <h3>Contexte</h3>
 		<p>Réalisation d'un site web avec le CMS Drupal. Le sujet était de faire un site internet pour présenter le BTS SIO de GAP et ses étudiants.</p>
+    	<h2>DokuWiki</h2>
     </div>
-    <h2>DokuWiki</h2>
     <div class="espace"></div>
     <div class="row center">
     	<div class="colonne-left">
@@ -117,8 +132,8 @@
         </div>
     </div>
     <div class="clear"></div>
-    <h3>Contexte</h3>
     <div class="row">
+        <h3>Contexte</h3>
 		<p>Réalisation d'un wiki pour le BTS SIO avec le CMS DokuWiki!.</p>
     </div>
     <div id="footer">
