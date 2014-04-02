@@ -14,6 +14,9 @@ body {
 }
 .header{
 	height:200px;
+	background-color:rgb(28,28,28);
+	border-bottom: solid;
+	border-bottom-color: rgb(255, 255, 255);
 }
 .f-head{
 	margin-top: 50px;
@@ -23,6 +26,26 @@ body {
 	top: 0;
 	width: 100%;
 	z-index:50;
+
+}
+.headPostionLogo{
+	padding-top:50px;
+}
+.headTextPosition {
+	padding-top:30px;
+}
+.headTitle{
+	font: bold 300% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	color:white;
+}
+.headName {
+	font: bold 150% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	color:white;
+
+}
+.headDescription {
+	font: bold 150% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	color:white;
 
 }
 /* le menu qui va bien */
