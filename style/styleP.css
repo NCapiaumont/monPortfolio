@@ -255,4 +255,12 @@ li{
 	display:block;
 	float:left;
 }
+#btn_up{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	display:none;
+	z-index:7;
+}
 /* width 665px passage en format tablette/téléphone */
