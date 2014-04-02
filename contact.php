@@ -9,23 +9,13 @@
 	<script type="text/javascript">
 		var menu = jQuery.noConflict();
 		menu("document").ready(function(){
-		
 			menu(window).scroll(function () {
 				if (menu(this).scrollTop() > 199) {
 					menu('.nav-container').addClass("f-nav");
+					menu(".contenu").addClass("f-head");
 				} else {
 					menu('.nav-container').removeClass("f-nav");
-				}
-			});
-		});
-		var head = jQuery.noConflict();
-		head("document").ready(function(){
-		
-			head(window).scroll(function () {
-				if (head(this).scrollTop() > 199) {
-					head(".contenu").addClass("f-head");
-				} else {
-					head(".contenu").removeClass("f-head");
+					menu(".contenu").removeClass("f-head");
 				}
 			});
 		});
@@ -97,5 +87,24 @@
             </div>
         </div>
     </div>
+    <div id="btn_up">
+		<img alt="Retour en haut" title="Retour en haut" src="images/scrollup.png">
+	</div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        //fonction qui permet de remonter en haut de page avec la fleche
+			$(function(){
+				$('#btn_up').click(function() {
+					$('html,body').animate({scrollTop: 0}, 'slow');
+				});
+				$(window).scroll(function(){
+					if($(window).scrollTop()<150){
+						$('#btn_up').fadeOut();
+					}else{
+						$('#btn_up').fadeIn();
+					}
+				});
+			});
+	</script>
 </body>
 </html>
