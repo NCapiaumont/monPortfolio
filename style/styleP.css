@@ -2,10 +2,9 @@
  * @author Nicolas Capiaumont
  * css des pages de mon portfolio sauf la page index (présentation générale)
  */
-/* Place tous les éléments de la page au bon endroit (bord sans margin et padding) */
+/* Place tous les éléments de la page au bon endroit (bord sans margin) */
 * {
 	margin: 0;
-	padding: 0;
 }
 /* Fixe le style d'ecriture sur la page */
 body {
@@ -175,10 +174,6 @@ p {
 .textOrange {
 	color:orange;	
 }
-/* Enleve les points des listes */
-li{
-	list-style-type:none;
-}
 /* change la couleur en cas d'erreur lors de l'envoi de l'email */
 .erreur{
 	background-color:red;	
@@ -244,6 +239,8 @@ li{
 #reseaux li{
 	float: left;
 	margin: 10px;
+	list-style-type:none;
+
 }
 /* placement des reseaux dans le footer */
 #reseaux {
