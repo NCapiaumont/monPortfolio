@@ -32,8 +32,17 @@
 	</script>
 </head>
 <body class="contenu">
-	<div class="header center">
-		DU BLABLABLALBLA RPZ WOLF LA FAMILLE SISI TMTC
+	<div class="header">
+    	<div class="row">
+        	<div class="colonne-left headPostionLogo">
+            	<a href="index.html"><img src="images/logoBlanc.png" alt="logo"></a>
+            </div>
+            <div class="colonne-right headTextPosition">
+            	<div class="headTitle">PortFolio</div>
+                <div class="headName">Nicolas Capiaumont</div>
+                <div class="headDescription">Développeur informatique</div>
+            </div>
+        </div>
 	</div>
     <div class="nav-container">
         <div class="nav">
