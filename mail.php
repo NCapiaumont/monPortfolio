@@ -75,7 +75,7 @@ if(!empty($_SERVER['HTTP_CLIENT_IP'])){
 // To email de moi
 $to = "nicolas.capiaumont@gmail.com";
 // Subject
-$subject = $sujet;
+//$subject = $sujet;
 // clé aléatoire de limite
 $boundary = md5(uniqid(microtime(), TRUE));
 // Headers
@@ -92,45 +92,47 @@ $msg .= $message."\r\n\r\n";
 $mes .= 'IP : '.$ipVisiteur;//fin du corps de l'email 
 if (!isset($_COOKIE['sent'])){//verification avec un cookie que le mail n'est pas envoyé plusieurs fois (avec un rafrechissement de page)
 	// Function mail(), envoi de l'email
-	if (mail($to, $subject, $msg, $headers)){
+	//if (mail($to, $subject, $msg, $headers)){
+		if (mail($to, $msg, $headers)){
 		/* On créé un cookie de courte durée (ici 120 secondes) pour éviter de 
 		 * renvoyer un e-mail en rafraichissant la page */  
 		setcookie('sent', '1', time() + 120);
 		// Debut message si l'email a bien était envoyé
-		echo ("<h1 class='good'>Votre email a bien était envoyé.</h1>
+		echo ("<h1 class='good'><img src='images/formulaire/valide.png'> Votre email a bien était envoyé.</h1>
 <h2>Merci de m'avoir envoyer un email, je vous répondrez dès que possible.</h2>");
 	}
 	else{
-		echo ("<h1 class='erreur'>Erreur lors de l'envoi de l'email !</h1>");
+		echo ("<h1 class='erreur'><img src='images/formulaire/erreur.png'> Erreur lors de l'envoi de l'email !</h1>");
 	}
 }
 /* Cas où le cookie est créé est qu'il est donc impossible d'envoyer un nouvel email */
 else{
-		echo ("<h1 class='wait'>Vous ne pouvez pas encore envoyer l'email !</h1><h2>Vous pourrez envoyer un nouvel e-mail dans 2 minutes au minimum.</h2>");
+		echo ("<h1 class='wait'><img src='images/formulaire/help.png'> Vous ne pouvez pas encore envoyer l'email !</h1><h2>Vous pourrez envoyer un nouvel e-mail dans 2 minutes au minimum.</h2>");
 }
 ?>
 <!-- FIN ENVOI DE L'EMAIL -->
 	<div class="espace"></div>
-    <form id="formDemande" method="post" action="mail.php">
     <div class="row">
-    	<div class="colonne-left">
-        	<h2>Votre Nom<span class="textOrange">*</span></h2>
-            <input class="inputTextDeco" name="nomEnvoyeur" type="text" placeholder="Nom" required>
-            <h2>Sujet<span class="textOrange">*</span></h2>
-            <input class="inputTextDeco" name="sujet" type="text" placeholder="Sujet" required>
-        	<h2>Votre adresse e-mail<span class="textOrange">*</span></h2>
-            <input class="inputTextDeco" name="emailEnvoyeur" type="email" placeholder="votre@adresse.com" required>
-        </div> 
-    <div class="colonne-right">
-		<h2>Votre message<span class="textOrange">*</span></h2>
-		<textarea placeholder="Tapez votre message" class="textareaDeco" id="message" rows="3" name="message" required></textarea>
-		</div>
+    	<div id="form-main">
+            <div id="form-div">
+                <form class="form" id="form1" method="post" action="mail.php">
+                  <p class="name">
+                    <input name="nomEnvoyeur" type="text" class="feedback-input" placeholder="Nom" id="name" required>
+                  </p>
+                  <p class="email">
+                    <input name="emailEnvoyeur" type="email" class="feedback-input" id="email" placeholder="Email" required>
+                  </p>
+                  <p class="text">
+                    <textarea name="message" class="feedback-input" id="comment" placeholder="Votre message" required></textarea>
+                  </p>
+                  <div class="submit">
+                    <input type="submit" value="SEND" id="button-orange"/>
+                  </div>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="clear"></div>
-	<div class="row center">
-    	<input class="buttonDeco " type="submit" value="Envoyer">
-    </div>
-	</form>
     <div id="footer">
         <div class="row">
             <div id="textesFooter">
