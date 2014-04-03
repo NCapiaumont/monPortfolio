@@ -50,26 +50,27 @@
     </div>
 	<h1>Me contacter</h1>
 	<div class="espace"></div>
-    <form id="formDemande" method="post" action="mail.php">
     <div class="row">
-    	<div class="colonne-left">
-        	<h2>Votre Nom<span class="textOrange">*</span></h2>
-            <input class="inputTextDeco" name="nomEnvoyeur" type="text" placeholder="Nom" required>
-            <h2>Sujet<span class="textOrange">*</span></h2>
-            <input class="inputTextDeco" name="sujet" type="text" placeholder="Sujet" required>
-        	<h2>Votre adresse e-mail<span class="textOrange">*</span></h2>
-            <input class="inputTextDeco" name="emailEnvoyeur" type="email" placeholder="votre@adresse.com" required>
-        </div> 
-    <div class="colonne-right">
-		<h2>Votre message<span class="textOrange">*</span></h2>
-		<textarea  placeholder="Tapez votre message" class="textareaDeco" id="message" rows="3" name="message" required></textarea>
-		</div>
+    	<div id="form-main">
+            <div id="form-div">
+                <form class="form" id="form1" method="post" action="mail.php">
+                  <p class="name">
+                    <input name="nomEnvoyeur" type="text" class="feedback-input" placeholder="Nom" id="name" required>
+                  </p>
+                  <p class="email">
+                    <input name="emailEnvoyeur" type="email" class="feedback-input" id="email" placeholder="Email" required>
+                  </p>
+                  <p class="text">
+                    <textarea name="message" class="feedback-input" id="comment" placeholder="Votre message" required></textarea>
+                  </p>
+                  <div class="submit">
+                    <input type="submit" value="SEND" id="button-orange"/>
+                  </div>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="clear"></div>
-	<div class="row center">
-    	<input class="buttonDeco " type="submit" value="Envoyer">
-    </div>
-	</form>
     <div id="footer">
         <div class="row">
             <div id="textesFooter">
