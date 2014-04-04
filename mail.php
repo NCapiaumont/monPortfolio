@@ -126,7 +126,7 @@ else{
                     <textarea name="message" class="feedback-input" id="comment" placeholder="Votre message" required></textarea>
                   </p>
                   <div class="submit">
-                    <input type="submit" value="SEND" id="button-orange"/>
+                    <input type="submit" value="ENVOYER" id="button-orange"/>
                   </div>
                 </form>
             </div>
@@ -138,6 +138,7 @@ else{
             <div id="textesFooter">
                 <div id="textFooterNicolas">Nicolas Capiaumont</div>
                 <div class="textFooterDroit">© 2014 Nicolas Capiaumont - Tous droits réservés - v1.0</div>
+                <div class="textFooterDroit">BTS SIO GAP - Lycée Dominique Villars</div>
                 <div class="textFooterDroit"><a class="textnodeco" href="legal.html">Mentions Legales</a></div>
             </div>
             <div id="reseaux">
