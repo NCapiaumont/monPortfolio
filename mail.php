@@ -98,16 +98,16 @@ if (!isset($_COOKIE['sent'])){//verification avec un cookie que le mail n'est pa
 		 * renvoyer un e-mail en rafraichissant la page */  
 		setcookie('sent', '1', time() + 120);
 		// Debut message si l'email a bien était envoyé
-		echo ("<h1 class='good'><img src='images/formulaire/valide.png'> Votre email a bien était envoyé.</h1>
+		echo ("<h1 class='good'><img src='images/formulaire/valide.png' alt='valide'> Votre email a bien était envoyé.</h1>
 <h2>Merci de m'avoir envoyer un email, je vous répondrez dès que possible.</h2>");
 	}
 	else{
-		echo ("<h1 class='erreur'><img src='images/formulaire/erreur.png'> Erreur lors de l'envoi de l'email !</h1>");
+		echo ("<h1 class='erreur'><img src='images/formulaire/erreur.png' alt='erreur'> Erreur lors de l'envoi de l'email !</h1>");
 	}
 }
 /* Cas où le cookie est créé est qu'il est donc impossible d'envoyer un nouvel email */
 else{
-		echo ("<h1 class='wait'><img src='images/formulaire/help.png'> Vous ne pouvez pas encore envoyer l'email !</h1><h2>Vous pourrez envoyer un nouvel e-mail dans 2 minutes au minimum.</h2>");
+		echo ("<h1 class='wait'><img src='images/formulaire/help.png' alt='probleme'> Vous ne pouvez pas encore envoyer l'email !</h1><h2>Vous pourrez envoyer un nouvel e-mail dans 2 minutes au minimum.</h2>");
 }
 ?>
 <!-- FIN ENVOI DE L'EMAIL -->
