@@ -67,7 +67,8 @@ body {
 	float: right !important;
 }
 a {
-	text-decoration:none;	
+	text-decoration:none;
+	color: orange;
 }
 /* Style des titres h1 */
 h1 {
@@ -205,8 +206,8 @@ li {
 .feedback-input:focus{
 	background: #fff;
 	box-shadow: 0;
-	border: 3px solid #3498db;
-	color: #3498db;
+	border: 3px solid orange;
+	color: orange;
 	outline: none;
   	padding: 13px 13px 13px 54px;
 }
