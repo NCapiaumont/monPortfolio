@@ -129,6 +129,7 @@ p {
 /* style des li */
 li {
 	padding: 5px;
+	list-style: circle;
 }
 /* class pour centrer */
 .center {
