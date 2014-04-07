@@ -65,18 +65,44 @@
     	<div class="colonne-right center">
             <h2>Logo</h2>
         	<img class="imgDeco" src="documents/antidot/logo-antidot.jpg" alt="logo antidot">
-        	<input type="button" class="buttonDeco" value="Voir sur GITHUB" onclick="self.location.href='https://github.com/NCapiaumont/ProjetAntidot';" >
+        	<input type="button" class="buttonDeco" value="Voir sur GitHub" onclick="self.location.href='https://github.com/NCapiaumont/ProjetAntidot';" >
             <input type="button" class="buttonDeco" value="Voir sur Mahara" onclick="self.location.href='http://www.btsinfogap.org/mahara/view/view.php?t=Eb8901SQWo2RFcI3jZMa';" >
+            <input type="button" class="buttonDeco" value="Voir le site Web" onclick="self.location.href='documents/antidot/www/index.php';" >
         </div>
         <div class="clear"></div>
         <h2>Informations</h2>
         <ul>
             <li>Site Web Antidot : <a href="http://www.antidot.net/">www.antidot.net</a></li>
-            <li>Application Web : <a href="antidot/index.html">Formulaire demande de machine</a> A METTRE EN PLACE !</li>
-            <li>Langage : HTML5, PHP5, CSS3, JQuery, Mysql</li>
+            <li>Application Web : <a href="documents/antidot/www/index.php">Espace demande de machine</a></li>
+            <li>Plateforme : Navigateur web sur ordinateur, tablette et smartphone (responsive design)</li>
+            <li>Langage : HTML5, PHP5, CSS3, JavaScript, Mysql, Json, XML</li>
+            <li>Dépendances : jQuery (pour un code compatible avec tous les navigateurs), Bootstrap Twitter (bulle d'aide), Chosen (liste déroulante)</li>
+            <li>Tout le code est disponible dans <a href="https://github.com/NCapiaumont/ProjetAntidot">GitHub</a></li>
+            <li>Informations complémentaires sur <a href="http://www.btsinfogap.org/mahara/view/view.php?t=Eb8901SQWo2RFcI3jZMa">Mahara</a></li>
         </ul>
         <h2>Cahier des charges</h2>
-        <p>//TODO//</p>
+        <h3>Intitulé du stage :</h3>
+        <p>Création d'une interface web permettant d'envoyer un email avec les besoins de l'utilisateur (Distribution, version, nom de la machine, performance, ...).</p>
+        <p>Dans le but de créer des "machines virutelles", "des serveurs" qui se trouve sur un site distant (situé à Vitry).
+        <p>Si le projet avance rapidement, orientation vers une création des machines virtuelles avec les configs demandé dans le formulaire de l'interface web, en "semi-automatique" (création des fichiers de conf qui permettront de créer les les machines grace à l'outil FAI).</p>
+        <h3>Demandes spécifiques</h3>
+        <p>Suite à plusieurs entretien avec mon maitre de stage ainsi que les futurs utilisateurs de l'application, nous avons décidé que j'allais developper l'application dans l'optique <a href="http://fr.wikipedia.org/wiki/Web_2.0">Web2.0</a> ou <a href="http://fr.wikipedia.org/wiki/Application_web_monopage">Single-Page application</a>, ce qui serait beaucoup plus adapté à une appliation web de nos jours.</p>
+        <p>La méthode <a href="http://fr.wikipedia.org/wiki/Application_web_monopage">Single-Page application</a> m'a nécessité d'apprendre des techniques et des conceptes riches tels que l'Ajax avec le javascript, qui avant le stage m'était encore inconnu. Ce qui ma value deux semaines d'apprentissage et de documentation sur le sujet.</p>
+        <h2>Images de l'application</h2>
+        <div class="colonne-left center">
+            <p class="center">Page d'accueil de l'application</p>
+            <img class="imgDeco" src="documents/antidot/accueil.png" alt="accueil fai">
+        </div>
+        <div class="colonne-right center">
+            <p class="center">Page de demande d'une nouvelle machine</p>
+            <img class="imgDeco" src="documents/antidot/demande.png" alt="demande fai">
+        </div>
+        <div class="clear"></div>
+        <h2>Fichier de conf</h2>
+        <p>Exemple de fichier de conf généré et envoyé par email automatiquement après avoir fait une nouvelle demande de machine</p>
+        <div class="center">
+            <img class="imgDeco" src="documents/antidot/conf.png" alt="conf">
+        </div>
     </div>
 	<div id="footer">
         <div class="row">

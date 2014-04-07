@@ -55,6 +55,11 @@
         <ul>
             <li><a href="#rca">Site web du Rotor Club Aixois</a></li>
             <li><a href="#portfolio">Mon PortFolio</a></li>
+            <li><a href="#tuto">Mes tutoriels</a></li>
+            <ul>
+                <li><a href="#resolution">Nouvelle résolution linux</a></li>
+                <li><a href="#skype">Installer skype sur linux</a></li>
+            </ul>
         </ul>
     </div>
     <div class="espace" id="rca"></div>
@@ -128,6 +133,97 @@
                 <li><a href="stage2.html">Le deuxième stage</a></li>
                 <li><a href="perso.html">Perso</a></li>
             </ul>
+        </ul>
+    </div>
+    <div class="espace" id="tuto"></div>
+    <div id="resolution"></div>
+    <h1>Mes Tutoriels</h1>
+    <div class="row">
+        <h2>Nouvelle résolution Linux</h2>
+        <div class="colonne-left">
+            <p>Un problème de résolution sous linux ?</p>
+            <p>Votre résolution ne correspond pas à votre écran ?</p>
+        </div>
+        <div class="colonne-right center">
+            <img class="imgDeco" src="documents/perso/resolution.png" alt="résolution">
+        </div>
+        <div class="clear"></div>
+        <h3>Ajouter une resolution</h3>
+        <p>Lancer la commande cvt Hauteur Largeur. Exemple pour la résolution 1920x1200:cvt 1920 1200</p>
+        <p>On crée ce nouveau mode et on ajoute à la liste des résolutions connues cette nouvelle config grâce à la commande : xrandr –newmode <ModeLine> et le modeline précédemment récupéré, puis on l'ajoute à notre écran via xrandr –output <SortieEcran> –mode <NomDuModeLine>.</p>
+        <p>Exemple pour la résolution 1920x1200 :</p>
+        <ul>
+            <li>xrandr --newmode "1920x1200_60"  106.50  1920 1528 1672 1904  1200 903 909 934 -hsync +vsync</li>
+        </ul>
+        <p>Ici, le nom du mode est 1920x1200_60</p>
+        <p>Ici, le nom de notre sortie est VGA1. Vous pouvez récupérer ce paramètre avec la commande xrandr | grep connected.</p>
+        <p>Il reste maintenant à appliquer cette résolution : xrandr --output <SortieEcran> --mode <NomDuMode></p>
+        <ul>
+            <li>xrandr --output VGA1 --mode 1920x1200_60</li>
+        </ul>
+        <p>executer le script au démarrage de linux</p>
+        <ul>
+            <li>$ /etc/gdm3/Init/Default</li>
+        </ul>
+        <h3>Recapitulatif</h3>
+        <p># Cree un nouveau mode pour la resolution</p>
+        <ul>
+            <li>xrandr --newmode "1920x1200_60"  106.50  1920 1528 1672 1904  1200 903 909 934 -hsync +vsync</li>
+        </ul>
+        <p># Ajoute le mode</p>
+        <ul>
+            <li>xrandr --addmode VGA1 1920x1200_60</li>
+        </ul>
+        <p># Applique le nouveau mode</p>
+        <ul>
+            <li>xrandr --output VGA1 --mode 1920x1200_60</li>
+        </ul>
+        <div class="espace" id="skype"></div>
+        <h2>Skype sur Debian 7.0 "Wheezy"</h2>
+        <h3>Installer skype</h3>
+        <div class="colonne-left">
+            <p>Skype est disponible pour les architectures amd64 et i386 architectures de Debian 5 et plus récent. En général, on trouve les derniers paquets sur le site de Skype.</p>
+            <p>Attention, il n'y a pas de dépôt qui possède la dernière version (4.x). Vous devrez donc télécharger le paquet chaque fois qu'il y a une mise à jour. Et comme apt-get ne peut pas vous avertir des mises à jour, on vous conseille d'activer "[x] Vérifier les mises à jour au démarrage" dans l'onglet ‘Avancé’ du menu options de Skype.</p>
+        </div>
+        <div class="colonne-right center">
+            <img class="imgDeco" src="documents/perso/skype.png" alt="skype">
+        </div>
+        <div class="clear"></div>
+        <h3>i386</h3>
+        <p>Le paquet i386 fonctionne bien avec un système Debian 7.0 i386 standard. Pour l'installer, exécutez les commandes :</p>
+        <ul>
+            <li># wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb</li>
+            <li># dpkg -i skype-install.deb</li>
+        </ul>
+        <p>On peut utiliser la commande :</p>
+        <ul>
+            <li># apt-get -f install</li>
+        </ul>
+        <p>pour corriger les problèmes de dépendances manquantes.</p>
+        <h3>amd64</h3>
+        <p>Si vous utilisez un système amd64 :</p>
+        <p>Multi-Arch :</p>
+        <p>A partir de Wheezy, Debian prend en charge Multi-Arch. Les paquets Skype pour i386 fonctionnent bien avec Multi-Arch, vous pouvez avoir des problèmes pour installer les paquets deb 64bits parce qu'ils dépendent des paquets ia32 qui ne sont plus disponible dans testing et sid à partir de wheezy.</p>
+        <p>D'abord, il faut activer Multi-Arch :</p>
+        <ul>
+            <li># dpkg --add-architecture i386</li>
+            <li># apt-get update</li>
+        </ul>
+        <p>Puis, téléchargez le paquet i386 comme on l'a vu plus haut et installez-le :</p>
+        <ul>
+            <li># wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb</li>
+            <li># dpkg -i skype-install.deb</li>
+        </ul>
+        <p>Si vous faites plutôt</p>
+        <ul>
+            <li># apt-get -f install</li>
+        </ul>
+        <p>un certain nombre de paquets i386 seront installés.</p>
+        <p>Si apt-get n'arrive pas à installer libqtwebkit4:i386 comme dépendance, essayez avec aptitude (si vous savez ce que vous faites)</p>
+        <h3>Les problèmes de son</h3>
+        <p>Si vous avez des problèmes de son, c'est peut-être dû à l'absence de libpulse. On peut l'installer ainsi :</p>
+        <ul>
+            <li># apt-get install libpulse0:i386</li>
         </ul>
     </div>
 	<div id="footer">
