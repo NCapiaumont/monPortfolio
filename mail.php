@@ -64,6 +64,7 @@ else{//trim enleve les espaces (début et fin)
 	$emailEnvoyeur = trim($_POST['emailEnvoyeur']);
 	$message = trim($_POST['message']);
 }
+$sujet="PortFolio";
 //recupération de l'adresse ip de la personne qui fait la demande
 if(!empty($_SERVER['HTTP_CLIENT_IP'])){
 	$ipVisiteur = $_SERVER['HTTP_CLIENT_IP'];
@@ -75,7 +76,7 @@ if(!empty($_SERVER['HTTP_CLIENT_IP'])){
 // To email de moi
 $to = "nicolas.capiaumont@gmail.com";
 // Subject
-//$subject = $sujet;
+$subject = $sujet;
 // clé aléatoire de limite
 $boundary = md5(uniqid(microtime(), TRUE));
 // Headers
@@ -92,8 +93,7 @@ $msg .= $message."\r\n\r\n";
 $mes .= 'IP : '.$ipVisiteur;//fin du corps de l'email 
 if (!isset($_COOKIE['sent'])){//verification avec un cookie que le mail n'est pas envoyé plusieurs fois (avec un rafrechissement de page)
 	// Function mail(), envoi de l'email
-	//if (mail($to, $subject, $msg, $headers)){
-		if (mail($to, $msg, $headers)){
+	if (mail($to, $subject, $msg, $headers)){
 		/* On créé un cookie de courte durée (ici 120 secondes) pour éviter de 
 		 * renvoyer un e-mail en rafraichissant la page */  
 		setcookie('sent', '1', time() + 120);
