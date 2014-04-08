@@ -65,14 +65,82 @@
     <div class="row">
     <h2>Application frais</h2>
 	<h3>Contexte</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
+    <div class="colonne-left">
+		<p>Le laboratoire Galaxy Swiss Bourdin (GSB) est issu de la fusion entre le géant américain Galaxy (spécialisé dans le secteur des maladies virales dont le SIDA et les hépatites) et le conglomérat européen Swiss Bourdin (travaillant sur des médicaments plus conventionnels), lui-même déjà union de trois petits laboratoires. Le suivi des frais est actuellement géré de plusieurs façons selon le laboratoire d’origine des visiteurs. On souhaite uniformiser cette gestion.</p>
+    </div>
+    <div class="colonne-right center">
+    	<img class="imgDeco" src="documents/gsb/gsb.png" alt="gsb">
+    </div>
+    <div class="clear"></div>
+    <h3></h3>
+    <p>Language : HTML5, PHP5, Mysql</p>
+	<p>Plateforme : Ordinateur, navigateur web</p>
+	<p>Equipe : 2 personnes (<a href="http://nicolas.capiaumont.port-folio.fr">Nicolas Capiaumont</a> et Vicent Fuste Carbo)</p>
 	<h3>Cahier des charges</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
+    <p>On nous à confier un cahier des charges.</p>
+    <p>PROJET : Application web de gestion des frais.</p>
+    <p>Description cas d'utilistion</p>
+    <br>
+    <table>
+        <tr>
+            <td>Nom cas d'utilisation : Renseigner fiche de frais</td>
+        </tr>
+        <tr>
+            <td>Acteur déclencheur : Visireur médical</td>
+        </tr>
+        <tr>
+            <td>Pré conditions : Visiteur médical authentifié</td>
+        </tr>
+        <tr>
+            <td>Post conditions : néant</td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Scénario nominal :</h4>
+                <ol>
+                    <li>L'utilisateur demande à saisir un ou plusieurs frais pour le mois courant.</li>
+                    <li>Le système retourne les frais actuellement saisis - éléments forfaitisés et hors forfait - pour le mois courant.</li>
+                    <li>L'utisateur modifie une ou des valeurs des frais au forfait et demande la validation.</li>
+                    <li>Le système enregistre cette ou ces modifications et retourne ces valeurs à jour.</li>
+                    <li>L'utilisateur ajoute un nouveau frais hors forfait en renseignant les différents champs - date d'engagement, libellé, motant - et valide.</li>
+                    <li>Le système enregistre la ligne de frais hors forfait.</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Exception :</h4>
+                <ol>
+                    <li>C’est la première saisie pour le mois courant. Si ce n’est pas encore fait, le système clôt la fiche du mois précédent et crée une nouvelle fiche de frais avec des valeurs initialisées à 0. Retour à 3.</li>
+                    <li>Une valeur modifiée n’est pas numérique : le système indique 'Valeur numérique attendue '. Retour à 3.</li>
+                    <li>Un des champs n'est pas renseigné : le système indique : 'Le champ date (ou libellé ou montant) doit être renseigné'.</li>
+                    <li>La date d'engagement des frais hors forfait est invalide : le système indique 'La date d'engagement doit être valide'. Retour à 5.</li>
+                    <li>La date d'engagement des frais hors forfait date de plus d’un an. Le système indique 'La date d'engagement doit se situer dans l’année écoulée'. Retour à 5.</li>
+                    <li>L’utilisateur sélectionne un frais hors forfait pour suppression.</li>
+                    <li>Le système enregistre cette suppression après une demande de confirmation.</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
     <h2>Gestion des comptes-rendus</h2>
 	<h3>Contexte</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
+    <div class="colonne-left">
+		<p>Le laboratoire Galaxy Swiss Bourdin (GSB) est issu de la fusion entre le géant américain Galaxy (spécialisé dans le secteur des maladies virales dont le SIDA et les hépatites) et le conglomérat européen Swiss Bourdin (travaillant sur des médicaments plus conventionnels), lui-même déjà union de trois petits laboratoires. Le suivi des frais est actuellement géré de plusieurs façons selon le laboratoire d’origine des visiteurs. On souhaite uniformiser cette gestion.</p>
+    </div>
+    <div class="colonne-right center">
+    	<img class="imgDeco" src="documents/gsb/gsb.png" alt="gsb">
+    </div>
+    <div class="clear"></div>
+    <h3>Informations</h3>
+    <p>Language : HTML5, PHP5, CSS3, Mysql</p>
+	<p>Plateforme : Ordinateur, navigateur web</p>
+	<p>Equipe : 4 personnes composé de 2 réseaux (Phillipe Burel, Arnaud Dilies) et de 2 développeur (<a href="http://nicolas.capiaumont.port-folio.fr">Nicolas Capiaumont</a> et <a href="http://kevin-darocha.fr">Kevin Da Rocha</a>)</p>
     <h3>Cahier des charges</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
+    <p>J’ai intégré une équipe de quatre personnes pour la réalisation de ce projet. Nous avons commencé par étudier minutieusement le cahier des charges afin de mieux se répartir les tâches et finaliser le site durant le temps imparti.</p>
+    <p>Objectif attendu :</p>
+    <p>Le laboratoire désire mettre à disposition des visiteurs médicaux une application Web permettant de centraliser les comptes rendus de visite. Cette base d’information sera utilisée à des fins d’élaboration de la démarche de communication auprès des praticiens et donnera une vision individuelle et synthétique de l’activité de représentation.</p>
+    <p>Pour permettre une aide au renseignement des rapports, l’application fournira une description des produits du laboratoire, les coordonnées précises des praticiens et des informations détaillées les concernant.</p>
+    <p>Elle servira aussi à la mise en relation de la hiérarchie de la force commerciale, des visiteurs aux responsables de secteur en passant par les délégués régionaux (on pourra envisager un outil de communication entre personnes ou vers un groupe).</p>
     <h2>Back Office</h2>
     <h3>Contexte</h3>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim risus, mattis quis erat nec, faucibus suscipit metus. Curabitur placerat condimentum lorem eu luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum vitae orci in feugiat. Suspendisse a eros nec risus elementum egestas vitae in nibh. Donec tincidunt in nisi et faucibus. Suspendisse ac venenatis mauris. Quisque adipiscing ligula vitae neque volutpat blandit. Sed mattis nibh tortor, a gravida nunc porttitor vel.</p>
