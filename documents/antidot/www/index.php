@@ -99,7 +99,7 @@
 	</ul>
 	<!-- Fin block social -->
 	<!-- ajout du copyright et du lien du site d'antidot -->
-    Copyright 2014 <a href=http://www.antidot.net/>Antidot</a> - Tous droits réservés
+    Copyright 2014 Antidot - Tous droits réservés
 </div>
 <!-- Fin block footer -->
 <!-- Debut bouton retour vers le haut -->
