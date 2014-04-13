@@ -48,9 +48,9 @@
             </div>
     	</div>
     </div>
-	<h1>Mes rélisations faites en cours</h1>
+	<h1>Mes réalisations faites en cours</h1>
     <div class="row">
-        <p>Dans cette partie je vais vous présenter toutes mes réalisations que j'ai eu l'occasion d'effectuer dans les différentes matières informatique durant la totalité (2 ans) ma formation au BTS SIO de GAP.</p>
+        <p>Dans cette partie je vais vous présenter toutes mes réalisations que j'ai eu l'occasion d'effectuer dans les différentes matières informatiques durant la totalité (2 ans) ma formation au BTS SIO de GAP.</p>
         <p>Liste de mes réalisations faites en cours :</p>
         <ul>
             <li><a href="#bugzilla">BugZilla</a></li>
@@ -86,20 +86,19 @@
         </ul>
         <p>Nous avons utiliser au cours des deux ans de formation l'outils BugZilla pour répertorier tous les bugs ou améliorations possible pour chacune des applications. Client léger comme client lourd.</p>
         <h2>Installation</h2>
-        <p>Pour l'installer vous avons créé un tutoriel a partir de plusieurs sources.</p>
+        <p>Pour l'installer vous avons créé un tutoriel à partir de plusieurs sources.</p>
         <p>Tutoriel disponible ici : <a href="https://docs.google.com/document/d/1136Ih-oVx6rON7leUZ9tnUCkRqhXlYS-CCezYrlerYM/edit?usp=sharing">Tutoriel d'installation BugZilla</a></p>
     </div>
     <div class="espace" id="intereurope"></div>
     <h1>InterEurope</h1>
     <div class="row">
     	<h2>Ralentissement BDD InterEurope</h2>
-        <p>Nous nous trouvons dans le context de InterEurope. Où la base qui est en production va commencer a ralentir, nous allons voir les causes possibles de ralentissement ainsi qu'une solution pour palier à ce problème.</p>
+        <p>Nous nous trouvons dans le context de InterEurope. Où la base qui est en production va commencer à ralentir, nous allons voir les causes possibles de ralentissement ainsi qu'une solution pour palier à ce problème.</p>
         <h3>Causes</h3>
-        <p>La cause du ralentissement est la table vol 65 000 vols par jour, qui passeront a 2 000 000 de vols par jour. Ce qui fait énormément de requêtes et donc qui va dans le futur ralentir la base de donnée quand il y aura beaucoup de vols.</p>
-        <p>Beaucoup trop de vols inutiles dans la table vol il serait</p>
+        <p>La cause du ralentissement est la table vol 65 000 vols par jour, qui passeront à 2 000 000 de vols par jour. Ce qui fait énormément de requêtes et donc qui va dans le futur ralentir la base de donnée quand il y aura beaucoup de vols.</p>
         <h3>Solution</h3>
-        <p>Création d'un autre serveur de base de données avec les mêmes tables, qui serait une copie en temps réél de l'autre serveur de base de données ce qui permettrai de découper/séparer les requetes, pour que le serveur soit moins surchargé. Un serveur recevrai exclusivement les requetes selects et l'autre serveur recevrait les inserts, delete et update.</p>
-        <p>Création d'une table archiveVol pour archiver des vols anciens pour ne pas surcharger la table vol. Création d'une table paramètre avec un champ archivage. Grace a un crontab mise a jour de la date dans la table paramètre, avec un trigger archivage des anciens vols de la table vol dans la table archivageVol.</p>
+        <p>Création d'un autre serveur de base de données avec les mêmes tables, qui serait une copie en temps réél de l'autre serveur de base de données ce qui permettrait de découper/séparer les requêtes, pour que le serveur soit moins surchargé. Un serveur recevrait exclusivement les requêtes selects et l'autre serveur recevrait les inserts, delete et update.</p>
+        <p>Création d'une table archiveVol pour archiver des vols anciens pour ne pas surcharger la table vol. Création d'une table paramètre avec un champ archivage. Grâce a un crontab mise à jour de la date dans la table paramètre, avec un trigger archivage des anciens vols de la table vol dans la table archivageVol.</p>
     </div>
     <div class="espace" id="courses"></div>
     <h1>Application des courses</h1>
@@ -107,7 +106,7 @@
         <div class="colonne-left">
             <h2>Présentation</h2>
             <p>Création avec Qt Creator d'une application mobile Android pour faire les courses.</p>
-            <p>Plus besoin du petit papier/crayon pour noter ça liste de courses, maintenant avec l'application liste de courses 2.0 il est possible de faire ses listes de courses avec son smartphone.</p>
+            <p>Plus besoin du petit papier/crayon pour noter sa liste de courses, maintenant avec l'application liste de courses 2.0 il est possible de faire ses listes de courses avec son smartphone.</p>
         </div>
         <div class="colonne-right center">
             <h2>Logo</h2>
@@ -127,8 +126,8 @@
         <ul>
             <li>Un onglet pour créer, modifier (ordre ou nom) et supprimer des rayons</li>
             <li>Un onglet pour créer, modifier et supprimer des produits</li>
-            <li>Un onglet pour gérer la liste des courses, ajouter, supprimer, modifier avec un nombre de composant un produit dans la liste</li>
-            <li>Un onglet de liste avec les produits selectionné précédemment et une liste avec les produits acheté (dans le cadie)</li>
+            <li>Un onglet pour gérer la liste des courses, ajouter, supprimer, modifier avec un nombre de composants un produit dans la liste</li>
+            <li>Un onglet de liste avec les produits selectionnés précédemment et une liste avec les produits achetés (dans le caddie)</li>
         </ul>
     </div>
     <div class="espace" id="taupes"></div>
@@ -137,7 +136,7 @@
         <div class="colonne-left">
             <h2>Présentation</h2>
             <p>Réalisation d'un jeu a l'aide de jQuery.</p>
-            <p>Le jeu de la taupe est un jeu d'arcade dont le but est de taper à l'aide d'un marteau sur les taupes qui sortent des trous de la console de jeu dans un temps impartie, pour réaliser le meilleur score possible</p>
+            <p>Le jeu de la taupe est un jeu d'arcade dont le but est de taper à l'aide d'un marteau sur les taupes qui sortent des trous de la console de jeu dans un temps imparti, pour réaliser le meilleur score possible</p>
         </div>
         <div class="colonne-right center">
             <h2>Logo</h2>
@@ -158,11 +157,11 @@
     <div class="row">
         <div class="colonne-left">
             <h2>Présentation</h2>
-            <p>Les regles du jeu :</p>
-            <p>Le jeu ce compose d’un plateau avec 9 cases possible et de 6 galets de deux couleurs différentes.</p>
-            <p>Chaque joueur a 3 galets. Le première joueur a les galets bleus et le deuxième a les galets rouges. 
+            <p>Les règles du jeu :</p>
+            <p>Le jeu se compose d’un plateau avec 9 cases possibles et de 6 galets de deux couleurs différentes.</p>
+            <p>Chaque joueur a 3 galets. Le premier joueur a les galets bleus et le deuxième a les galets rouges. 
             Le but est d’obtenir une ligne complète avec ses galets de même couleur.</p>
-            <p>Pour cela il faut préalablement déposer tous ses jetons sur le plateau, une fois déposé tous les jetons il est possible de faire glisser un jeton d’une case maximum par tour.</p>
+            <p>Pour cela il faut préalablement déposer tous ses jetons sur le plateau, une fois déposés tous les jetons il est possible de faire glisser un jeton d’une case maximum par tour.</p>
         </div>
         <div class="colonne-right center">
             <h2>Logo</h2>
@@ -187,7 +186,7 @@
                 <li>En réseau</li>
             </ul>   
         </ul>
-        <p>Traduction du jeu dans plusieurs langages. Voici les langues dans lequel l'application est disponible :</p>
+        <p>Traduction du jeu dans plusieurs langages. Voici les langues dans lesquelles l'application est disponible :</p>
         <ul>
         	<li>Français</li>
             <li>Anglais</li>
@@ -201,8 +200,8 @@
     <div class="row">
         <div class="colonne-left">
             <h2>Présentation</h2>
-            <p>Application client lourd qui permet (comme phpmyadmin en client léger) de gérer tout ce qu'il est possible ou en partie possible de faire sur Mysql.</p>
-            <p>Dans cette application il est possible ce connecter a mysql ainsi que de de créer, modifier ou encore supprimer une base de données ainsi que toutes les tables. Il est aussi possible d'executer des requetes.</p>
+            <p>Application client lourd qui permet (comme phpmyadmin en client léger) de gérer tout ce qui est possible ou en partie possible de faire sur Mysql.</p>
+            <p>Dans cette application il est possible de se connecter à mysql ainsi que de de créer, modifier ou encore supprimer une base de données ainsi que toutes les tables. Il est aussi possible d'exécuter des requêtes.</p>
         </div>
         <div class="colonne-right center">
             <h2>Logo</h2>
