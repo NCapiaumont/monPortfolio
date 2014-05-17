@@ -1,49 +1,48 @@
 <html>
 <head>
-<title>Jeu des taupes</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-<link type="text/css" rel="stylesheet" media="screen" href="taupe.css"/>
-<script type="text/javascript">
-$(document).ready(function() {
-var outime=500;
-var click=true;
-	function monte(){	
-	click=true;
-	var number = 1 + Math.floor(Math.random() * 3);
-		$(".taupe2").attr("class","taupe");
-		$("#taupe"+number).animate({"margin-top": "-=150px"},300).delay(outime).animate({"margin-top": "+=150px"},400);
-		setTimeout(monte,2000);
-	};
-	monte();
-	$(".taupe").click(function() {
-
-		if(click)
-		{
-			$(this).stop();
-			$(".taupe").attr("class","taupe2");
-			var margin=$(this).css("margin-top").replace("px",'');
-			margin=200-parseInt(margin);
-			var time=margin*4;
-			$(this).animate({"margin-top": "200px"},time);
-			var score=$("#points").text();
-			score++;
-			$("#points").text(score);
-			click=false;
-		}
-	});
-});
-</script>
+	<title>Jeu jQuery</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="taupe.css"/>
 </head>
 <body>
-<div id="playarea">
-<div id="score">Score : <span id="points">0</span> points</div>
-<div class="taupe" id="taupe1"></div>
-<div class="taupe" id="taupe2"></div>
-<div class="taupe" id="taupe3"></div>
-<div class="trou" id="trou1"></div>
-<div class="trou" id="trou2"></div>
-<div class="trou" id="trou3"></div>
-<div id="floor"></div>
-</div>
+	<div id="ciel">
+		<div id="taupe1" class="taupe"></div>
+		<div class="taupe" id="taupe2"></div>
+		<div class="taupe" id="taupe3"></div>
+		<div class="trou" id="trou1"></div>
+		<div class="trou" id="trou2"></div>
+		<div class="trou" id="trou3"></div>
+		<div id="terrain"></div>
+		<div id="score">
+			<span id="points">0</span> points
+		</div>
+	</div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	var outime=500;
+	var click=true;
+		function monte(){	
+		click=true;
+			var number=1+Math.floor(Math.random()*3);
+			$("#taupe"+number).animate({"margin-top": "-=150px"},300).delay(outime).animate({"margin-top": "+=150px"},400);
+			setTimeout(monte,2000);
+		};
+		monte();
+		$(".taupe").click(function() {
+			if(click)
+			{
+				$(this).stop();
+				var margin=$(this).css("margin-top").replace("px",'');
+				margin=200-parseInt(margin);
+				var time=margin*4;
+				$(this).animate({"margin-top": "200px"},time);
+				var score=$("#points").text();
+				score++;
+				$("#points").text(score);
+				click=false;
+			}
+		});
+	});
+	</script>
 </body>
 </html>
